@@ -44,15 +44,18 @@ body {
     border-bottom: 50px solid #28a745;
     margin-top: 10px;
 }
+.layer1 .red {
+ top: 20px;
+    left: 10px;
+    background-color: red;
+}
 
  .ball {
     width: 5px;
     height: 5px;
     position: absolute;
     z-index: auto;
-    border-radius: 50%;
- 
-
+    border-radius: 100%;
  }
 
  .red {
@@ -105,7 +108,7 @@ body {
 
 /* Glowing Text */
 .title {
-    font-size: 40px;
+    font-size: 80px;
     color: #fff;
     text-align: center;
     -webkit-animation: glow 1s ease-in-out infinite alternate;
@@ -113,7 +116,7 @@ body {
     animation: glow 1s ease-in-out infinite alternate;
     font-family: 'Pacifico', cursive;
     position: absolute;
-    top: -120px;
+    top: -65%;
     width: 95%;
   }
   
@@ -124,6 +127,176 @@ body {
     
     to {
       text-shadow: 0 0 10px #fff, 0 0 20px #008000, 0 0 30px , 0 0 40px  #008000 , 0 0 50px  #008000;
+    }
+  }
+
+  /* Swinging balls */
+
+  #box0, #box1, #box2, #box3{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    left: 15%;
+    top: 10px;
+    background: #934;
+    border-radius: 100px;
+    box-shadow: inset 22px 0 23px rgba(50,50,50,0.4);
+    animation: swing ease-in-out 3000ms infinite;
+    transform: scale(0.02) translate(0px, 500px);
+    /*Enable this line to really make your machine sweat!*/
+    /*-webkit-animation-name: swing, blur;*/
+  }
+  
+  #box0{
+    left: -150%;
+  }
+  #box1{
+    background: #77f;
+    left: -60%;
+   animation-delay: 1000ms;
+  }
+  
+  #box2{
+    background: #dc7;
+    left: 105%;
+    animation-delay: 200ms;
+  }
+  
+  #box3{
+    background: #8Fa;
+    left:185%;
+    animation-delay: 500ms;
+  }
+  
+  #box0::before{
+    height:4000px;
+    width: 6px;
+    margin-left: 90px;
+    margin-top: -4005px;
+    display:block;
+    content: "";
+    background: rgba(50,50,50,0.5);
+    border-left:8px solid #fff;
+    border-right:8px solid #fff;
+    border-bottom: 15px solid #ff0;
+    border-radius: 5px 0 5px 5px;
+  }
+  
+  #box0::after{
+    content: "";
+    border-left: 13px solid rgba(255,255,255,0.2);
+    border-top: 13px solid rgba(255,255,255,0.2);
+    height: 150px;
+    width: 150px;
+    border-radius: 150px;
+    margin-left: 30px;
+    margin-top: 15px;
+    display: block;
+    transform: rotate(170deg)
+  }
+  
+  #box1::before{
+    height:4000px;
+    width: 6px;
+    margin-left: 90px;
+    margin-top: -4005px;
+    display:block;
+    content: "";
+    background: rgba(50,50,50,0.5);
+    border-left:8px solid #fff;
+    border-right:8px solid #fff;
+    border-bottom: 15px solid #ff0;
+    border-radius: 5px 0 5px 5px;
+  }
+  
+  #box1::after{
+    content: "";
+    border-left: 13px solid rgba(255,255,255,0.2);
+    border-top: 13px solid rgba(255,255,255,0.2);
+    height: 150px;
+    width: 150px;
+    border-radius: 150px;
+    margin-left: 30px;
+    margin-top: 15px;
+    display: block;
+    transform: rotate(170deg)
+  }
+
+  #box2::before{
+    height:4000px;
+    width: 6px;
+    margin-left: 90px;
+    margin-top: -4005px;
+    display:block;
+    content: "";
+    background: rgba(50,50,50,0.5);
+    border-left:8px solid #fff;
+    border-right:8px solid #fff;
+    border-bottom: 15px solid #ff0;
+    border-radius: 5px 0 5px 5px;
+  }
+  
+  #box2::after{
+    content: "";
+    border-left: 13px solid rgba(255,255,255,0.2);
+    border-top: 13px solid rgba(255,255,255,0.2);
+    height: 150px;
+    width: 150px;
+    border-radius: 150px;
+    margin-left: 30px;
+    margin-top: 15px;
+    display: block;
+    transform: rotate(170deg)
+  }
+
+    #box3::before{
+    height:4000px;
+    width: 6px;
+    margin-left: 90px;
+    margin-top: -4005px;
+    display:block;
+    content: "";
+    background: rgba(50,50,50,0.5);
+    border-left:8px solid #fff;
+    border-right:8px solid #fff;
+    border-bottom: 15px solid #ff0;
+    border-radius: 5px 0 5px 5px;
+  }
+  
+  #box3::after{
+    content: "";
+    border-left: 13px solid rgba(255,255,255,0.2);
+    border-top: 13px solid rgba(255,255,255,0.2);
+    height: 150px;
+    width: 150px;
+    border-radius: 150px;
+    margin-left: 30px;
+    margin-top: 15px;
+    display: block;
+    transform: rotate(170deg)
+  }
+
+  @keyframes swing {
+    0%{
+       transform: scale(0.02) translate(0px, 500px);
+    }
+    50%{
+       transform: scale(1) translate(0px, 0px);
+    }
+    100%{
+       transform: scale(0.02) translate(0px, 500px);
+    }
+  }
+  
+  @keyframes blur {
+    0%{
+       -webkit-filter: blur(5px);
+    }
+    50%{
+       -webkit-filter: blur(0px);
+    }
+    100%{
+       -webkit-filter: blur(5px);
     }
   }
 
