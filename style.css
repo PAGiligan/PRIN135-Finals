@@ -14,7 +14,6 @@ body {
     margin: 0;
     background-color: #2d3e50;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #000, #111); /* Fondo de cielo */
   color: white;
 }
 
@@ -46,11 +45,16 @@ body {
     margin-top: 10px;
 }
 
+ .ball {
+    
+ }
+
 .layer2 {
     border-left: 150px solid transparent;
     border-right: 150px solid transparent;
     border-bottom: 150px solid #28a745;
     margin-top: -20px;
+    
 }
 
 .layer3 {
@@ -70,7 +74,7 @@ body {
 }
 
 .title {
-    font-size: 80px;
+    font-size: 50px;
     color: #fff;
     text-align: center;
     -webkit-animation: glow 1s ease-in-out infinite alternate;
@@ -85,10 +89,10 @@ body {
   
   @keyframes glow {
     from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000, 0 0 70px #ff0000;
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff0000;
     }
     
     to {
-      text-shadow: 0 0 10px #fff, 0 0 20px #008000, 0 0 30px , 0 0 40px  #008000 , 0 0 50px  #008000 , 0 0 60px #008000 , 0 0 70px  #008000 , 0 0 80px  #008000 ;
+      text-shadow: 0 0 10px #fff, 0 0 20px #008000, 0 0 30px , 0 0 40px  #008000 , 0 0 50px  #008000;
     }
   }
