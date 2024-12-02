@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +14,10 @@ body {
     margin: 0;
     background-color: #2d3e50;
     font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #000, #111); /* Fondo de cielo */
+  color: white;
 }
+
 
 .tree {
     position: relative;
@@ -63,3 +68,27 @@ body {
     margin-top: -20px;
     border-radius: 4px;
 }
+
+.title {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+    font-family: 'Pacifico', cursive;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    transform: rotate(-30deg);
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000, 0 0 70px #ff0000;
+    }
+    
+    to {
+      text-shadow: 0 0 10px #fff, 0 0 20px #008000, 0 0 30px , 0 0 40px  #008000 , 0 0 50px  #008000 , 0 0 60px #008000 , 0 0 70px  #008000 , 0 0 80px  #008000 ;
+    }
+  }
